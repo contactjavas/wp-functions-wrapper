@@ -1,6 +1,6 @@
 <?php
 /**
- * Post type utility
+ * Post type utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,12 @@ namespace Wpfw;
 use Wpfw\Helpers\Post_Type_Helper;
 
 /**
- * Class to manage post type utility
+ * Class to manage post type utility.
  */
 class Post_Type {
 
 	/**
-	 * Register new post type
+	 * Register new post type.
 	 *
 	 * @param string $singular_name The singular name.
 	 * @param string $plural_name The plural name.
@@ -27,7 +27,7 @@ class Post_Type {
 	}
 
 	/**
-	 * Beautiful alias for "register"
+	 * Beautiful alias for "register".
 	 *
 	 * @param string $singular_name The singular name.
 	 * @param string $plural_name The plural name.

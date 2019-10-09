@@ -1,6 +1,6 @@
 <?php
 /**
- * Asset's utility
+ * Asset's utility.
  *
  * @package WPFW
  */
@@ -72,7 +72,7 @@ class Asset {
 	}
 
 	/**
-	 * Get last modified time
+	 * Get last modified time.
 	 *
 	 * @param string $url Url of the asset.
 	 * @return string Last modified time.

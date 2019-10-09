@@ -1,6 +1,6 @@
 <?php
 /**
- * Taxonomy utility
+ * Taxonomy utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,11 @@ namespace Wpfw;
 use Wpfw\Helpers\Taxonomy_Helper;
 
 /**
- * Class to manage taxonomy utility
+ * Class to manage taxonomy utility.
  */
 class Taxonomy {
-
 	/**
-	 * Register new taxonomy
+	 * Register new taxonomy.
 	 *
 	 * @param string $singular_name The singular name.
 	 * @param string $plural_name The plural name.
@@ -27,7 +26,7 @@ class Taxonomy {
 	}
 
 	/**
-	 * Beautiful alias for "register"
+	 * Beautiful alias for "register".
 	 *
 	 * @param string $singular_name The singular name.
 	 * @param string $plural_name The plural name.

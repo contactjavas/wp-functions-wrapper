@@ -1,6 +1,6 @@
 <?php
 /**
- * File helper statical interface
+ * File helper utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,12 @@ namespace Wpfw;
 use Wpfw\Helpers\File_Helper;
 
 /**
- * Class to manage statical interface of file helper
+ * Class to manage utility of file helper.
  */
 class File_Util {
 
 	/**
-	 * Copy file to specific destination
+	 * Copy file to specific destination.
 	 *
 	 * @param string  $source The source path.
 	 * @param string  $dest The destination path.
@@ -28,7 +28,7 @@ class File_Util {
 	}
 
 	/**
-	 * Remove the whole directory
+	 * Remove the whole directory.
 	 *
 	 * @param string $dir The directory path.
 	 * @return bool
@@ -39,7 +39,7 @@ class File_Util {
 	}
 
 	/**
-	 * Empty a directory
+	 * Empty a directory.
 	 *
 	 * @param string $dir The directory path.
 	 * @return void
@@ -50,7 +50,7 @@ class File_Util {
 	}
 
 	/**
-	 * Load components
+	 * Load components.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to load the components.
@@ -62,7 +62,7 @@ class File_Util {
 	}
 
 	/**
-	 * Include all files in specific directory
+	 * Include all files in specific directory.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to include.
@@ -74,7 +74,7 @@ class File_Util {
 	}
 
 	/**
-	 * Require all files in specific directory
+	 * Require all files in specific directory.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to require.

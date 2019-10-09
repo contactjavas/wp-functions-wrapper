@@ -1,6 +1,6 @@
 <?php
 /**
- * Post type interfaces
+ * Post type helper.
  *
  * @package WPFW
  */
@@ -8,27 +8,27 @@
 namespace Wpfw\Helpers;
 
 /**
- * Class to provide metabox utilities
+ * Class to provide metabox utilities.
  */
 class Post_Type_Helper {
 
 	/**
-	 * Item's id
+	 * Item's id.
 	 *
 	 * @var integer
 	 */
 	private $id = -1;
 
 	/**
-	 * Item's container
+	 * Item's container.
 	 *
 	 * @var array
 	 */
-	private $item = [];
+	private $items = [];
 
 	/**
-	 * Available argument's keys
-	 * Not used in this class, but used as helper when writing methods
+	 * Available argument's keys.
+	 * Not used in this class, but used as helper when writing methods.
 	 *
 	 * @var array
 	 */
@@ -65,7 +65,7 @@ class Post_Type_Helper {
 	];
 
 	/**
-	 * Register post type name
+	 * Register post type name.
 	 *
 	 * @param string $singular_name The singular name.
 	 * @param string $plural_name The plural name.
@@ -86,7 +86,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set the post type key
+	 * Set the post type key.
 	 * This is the 1st parameter in "register_post_type" function.
 	 *
 	 * @param string $post_type_key The post type key.
@@ -98,7 +98,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "labels" args
+	 * Set "labels" args.
 	 *
 	 * @param array $array Array of labels.
 	 * @return object
@@ -116,7 +116,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set the post type description
+	 * Set the post type description.
 	 *
 	 * @param string $description Post type description.
 	 * @return object
@@ -127,7 +127,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "public" args as true
+	 * Set "public" args as true.
 	 *
 	 * @param boolean $is_public Whether to set the "public" args true or false.
 	 * @return object
@@ -138,7 +138,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "public" args as false
+	 * Set "public" args as false.
 	 *
 	 * @return object
 	 */
@@ -148,7 +148,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set the "hierarchical" args
+	 * Set the "hierarchical" args.
 	 *
 	 * @param boolean $hierarchical Whether the post type is hierarchical (e.g. page).
 	 * @return object
@@ -159,7 +159,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "show_ui" args as true
+	 * Set "show_ui" args as true.
 	 *
 	 * @param boolean $is_shown Whether to set the "show_ui" args true or false.
 	 * @return object
@@ -170,7 +170,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "show_ui" args as false
+	 * Set "show_ui" args as false.
 	 *
 	 * @return object
 	 */
@@ -180,7 +180,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "show_in_menu" args as true
+	 * Set "show_in_menu" args as true.
 	 *
 	 * @param boolean $is_shown Whether to set the "show_in_menu" args true or false.
 	 * @return object
@@ -191,7 +191,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "show_in_menu" args as false
+	 * Set "show_in_menu" args as false.
 	 *
 	 * @return object
 	 */
@@ -201,7 +201,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set the "supports" args
+	 * Set the "supports" args.
 	 *
 	 * @param array $supports Core feature(s) the post type supports.
 	 * @return object
@@ -212,7 +212,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set the "menu_icon" args
+	 * Set the "menu_icon" args.
 	 *
 	 * @param string $icon The url to the icon to be used for this menu.
 	 * @return object
@@ -223,7 +223,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "has_archive" args to true
+	 * Set "has_archive" args to true.
 	 *
 	 * @return object
 	 */
@@ -233,7 +233,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set "has_archive" args to false
+	 * Set "has_archive" args to false.
 	 *
 	 * @return object
 	 */
@@ -243,7 +243,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set argument using key, value as param
+	 * Set argument using key, value as param.
 	 *
 	 * @param string $arg_name The argument name.
 	 * @param mixed  $arg_value The argument value.
@@ -255,7 +255,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set arguments using array of key-value pair
+	 * Set arguments using array of key-value pair.
 	 *
 	 * @param array $args The arguments (key-value pair).
 	 * @return object
@@ -276,8 +276,8 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Set admin menu name
-	 * Part of "labels" args
+	 * Set admin menu name.
+	 * Part of "labels" args.
 	 *
 	 * @param string $menu_name Label for the menu name.
 	 * @return object
@@ -288,7 +288,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Collect the arguments
+	 * Collect the arguments.
 	 *
 	 * @return void
 	 */
@@ -340,7 +340,7 @@ class Post_Type_Helper {
 	}
 
 	/**
-	 * Add the post type
+	 * Add the post type.
 	 *
 	 * @param string $hook The hook used to register the post type.
 	 * @return void

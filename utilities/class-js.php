@@ -1,6 +1,6 @@
 <?php
 /**
- * JS enqueue statical interface
+ * JS enqueue utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,12 @@ namespace Wpfw;
 use Wpfw\Helpers\JS_Helper;
 
 /**
- * Class to manage statical interface of script enqueue
+ * Class to manage utility of script enqueue.
  */
 class JS {
 
 	/**
-	 * Register a script
+	 * Register a script.
 	 *
 	 * @param string $handle Name of the script. Should be unique.
 	 * @return object Chaining js enqueue methods.
@@ -26,8 +26,8 @@ class JS {
 	}
 
 	/**
-	 * Localize global object to a specific script
-	 * Wrapper for wp_localize_script
+	 * Localize global object to a specific script.
+	 * Wrapper for wp_localize_script.
 	 *
 	 * @param string $handle Script handle which the data will be attached to.
 	 * @param string $object_name Name for the JavaScript object.
@@ -39,8 +39,8 @@ class JS {
 	}
 
 	/**
-	 * Add global object to a specific script
-	 * Wrapper for wp_localize_script
+	 * Add global object to a specific script.
+	 * Wrapper for wp_localize_script.
 	 *
 	 * @param string $handle Script handle which the data will be attached to.
 	 * @param string $object_name Name for the JavaScript object.
@@ -52,7 +52,7 @@ class JS {
 	}
 
 	/**
-	 * Output global object instead of localizing it to specific script
+	 * Output global object instead of localizing it to specific script.
 	 *
 	 * @see See https://developer.wordpress.org/reference/classes/wp_scripts/localize/
 	 *

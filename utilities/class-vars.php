@@ -1,6 +1,6 @@
 <?php
 /**
- * Setter & getter utility
+ * Setter & getter utility.
  *
  * @package WPFW
  */
@@ -8,7 +8,7 @@
 namespace Wpfw;
 
 /**
- * Global setter & getter utility
+ * Global setter & getter utility.
  *
  * Vars::set($key, $value);
  *
@@ -22,14 +22,14 @@ namespace Wpfw;
 class Vars {
 
 	/**
-	 * Item's container
+	 * Item's container.
 	 *
 	 * @var array
 	 */
 	private static $vars = [];
 
 	/**
-	 * Get value from a given key
+	 * Get value from a given key.
 	 *
 	 * @param string $name The key name.
 	 * @return mixed
@@ -40,7 +40,7 @@ class Vars {
 	}
 
 	/**
-	 * Set key-value pair
+	 * Set key-value pair.
 	 * - single mode: set the $key as key name, $value as the data
 	 * - multiple mode: set the $key as array of key-value pairs, and leave the $value empty
 	 *

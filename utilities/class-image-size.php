@@ -1,6 +1,6 @@
 <?php
 /**
- * CSS enqueue statical interface
+ * CSS enqueue utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,12 @@ namespace Wpfw;
 use Wpfw\Helpers\Image_Size_Helper;
 
 /**
- * Class to manage statical interface of style enqueue
+ * Class to manage utility of style enqueue.
  */
 class Image_Size {
 
 	/**
-	 * Register image size
+	 * Register image size.
 	 *
 	 * @param string $size_name Image size identifier.
 	 * @return object

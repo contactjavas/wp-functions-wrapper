@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin Ajax statical interface
+ * Admin Ajax utility.
  *
  * @package WPFW
  */
@@ -10,14 +10,13 @@ namespace Wpfw;
 use Wpfw\Helpers\Admin_Ajax_Helper;
 
 /**
- * Class to manage statical interface of admin ajax
+ * Class to manage utility of admin ajax
  */
 class Admin_Ajax {
-
 	/**
-	 * Register admin ajax
+	 * Register admin ajax.
 	 *
-	 * @param string $action The action to be registered to wp_ajax_ .
+	 * @param string $action The action to be registered to wp_ajax_.
 	 * @return object
 	 */
 	public static function register( $action ) {
@@ -26,9 +25,9 @@ class Admin_Ajax {
 	}
 
 	/**
-	 * Beautiful alias for "register"
+	 * Beautiful alias for "register".
 	 *
-	 * @param string $action The action to be registered to wp_ajax_ .
+	 * @param string $action The action to be registered to wp_ajax_.
 	 * @return object
 	 */
 	public static function make( $action ) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * CSS enqueue statical interface
+ * CSS enqueue utility.
  *
  * @package WPFW
  */
@@ -10,12 +10,11 @@ namespace Wpfw;
 use Wpfw\Helpers\CSS_Helper;
 
 /**
- * Class to manage statical interface of style enqueue
+ * Class to manage utility of style enqueue.
  */
 class CSS {
-
 	/**
-	 * Register a stylesheet
+	 * Register a stylesheet.
 	 *
 	 * @param string $handle Name of the stylesheet. Should be unique.
 	 * @return object Chaining css enqueue methods.

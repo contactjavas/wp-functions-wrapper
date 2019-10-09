@@ -10,12 +10,12 @@ namespace Wpfw;
 use Wpfw\Helpers\Metabox_Helper;
 
 /**
- * Class to manage metabox utility
+ * Class to manage metabox utility.
  */
 class Metabox {
 
 	/**
-	 * Register new metabox
+	 * Register new metabox.
 	 *
 	 * @param string $name The metabox id.
 	 * @return object
@@ -26,7 +26,7 @@ class Metabox {
 	}
 
 	/**
-	 * Beautiful alias for "register"
+	 * Beautiful alias for "register".
 	 *
 	 * @param string $name The metabox id.
 	 * @return object

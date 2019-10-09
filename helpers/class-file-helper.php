@@ -1,6 +1,6 @@
 <?php
 /**
- * File helper interfaces
+ * File operation helper.
  *
  * @package WPFW
  */
@@ -8,21 +8,21 @@
 namespace Wpfw\Helpers;
 
 /**
- * Class to provide file helper methods
+ * Class to provide file helper methods.
  *
- * @todo Many operations are phpcs-ignored, need to find proper solution
+ * @todo Many operations are phpcs-ignored, need to find proper solution.
  */
 class File_Helper {
 
 	/**
-	 * Maximum scan depth
+	 * Maximum scan depth.
 	 *
 	 * @var integer
 	 */
 	protected $max_scan_depth = 5;
 
 	/**
-	 * Copy a file, or recursively copy a folder and its contents
+	 * Copy a file, or recursively copy a folder and its contents.
 	 *
 	 * @author      Aidan Lister <aidan@php.net>
 	 * @version     1.0.1
@@ -32,7 +32,7 @@ class File_Helper {
 	 * @param       string $dest      Destination path.
 	 * @param       int    $permissions New folder creation permissions.
 	 *
-	 * @return      bool     Returns true on success, false on failure
+	 * @return      bool     Returns true on success, false on failure.
 	 */
 	public function copy( $source, $dest, $permissions = 0755 ) {
 		// check for symlinks.
@@ -89,7 +89,7 @@ class File_Helper {
 	}
 
 	/**
-	 * Empty a directory
+	 * Empty a directory.
 	 *
 	 * @param string $dir The directory path.
 	 * @return void
@@ -147,7 +147,7 @@ class File_Helper {
 	}
 
 	/**
-	 * Load components
+	 * Load components.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to scan.
@@ -163,7 +163,7 @@ class File_Helper {
 	}
 
 	/**
-	 * Include all files
+	 * Include all files.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to scan.
@@ -179,7 +179,7 @@ class File_Helper {
 	}
 
 	/**
-	 * Require all files
+	 * Require all files.
 	 *
 	 * @param string  $dir The directory path.
 	 * @param integer $max_depth Maximum depth to scan.

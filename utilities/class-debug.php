@@ -1,6 +1,6 @@
 <?php
 /**
- * Debugging utility
+ * Debugging utility.
  *
  * @package WPFW
  */
@@ -8,7 +8,7 @@
 namespace Wpfw;
 
 /**
- * Class to provide debugging utility
+ * Class to provide debugging utility.
  *
  * Many operations are phpcs-ignored, because this class is just providing debugging utility,
  * not calling/ initializing directly
@@ -16,7 +16,7 @@ namespace Wpfw;
 class Debug {
 
 	/**
-	 * Readable var_dump
+	 * Readable var_dump.
 	 *
 	 * @param mixed  $var The variable to be dumped.
 	 * @param string $mode Var dump or print_r.
@@ -33,7 +33,7 @@ class Debug {
 	}
 
 	/**
-	 * Print variable as JSON
+	 * Print variable as JSON.
 	 *
 	 * @param mixed $var The variable to be printed.
 	 * @return void
@@ -46,9 +46,9 @@ class Debug {
 	}
 
 	/**
-	 * Log the variable
+	 * Log the variable.
 	 *
-	 * @todo Handle the $file param
+	 * @todo Handle the $file param.
 	 *
 	 * @param mixed   $var The variable to be logged.
 	 * @param boolean $file Whether to log it tp debug.log or custom file location.
