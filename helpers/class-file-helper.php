@@ -153,7 +153,7 @@ class File_Helper {
 	 * @param integer $max_depth Maximum depth to scan.
 	 * @return void
 	 */
-	public function load_components( $dir, $max_depth = 1 ) {
+	public function load_modules( $dir, $max_depth = 1 ) {
 		if ( $max_depth < 1 ) {
 			$max_depth = 1;
 		}
