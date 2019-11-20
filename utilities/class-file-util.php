@@ -50,15 +50,15 @@ class File_Util {
 	}
 
 	/**
-	 * Load components.
+	 * Load modules.
 	 *
 	 * @param string  $dir The directory path.
-	 * @param integer $max_depth Maximum depth to load the components.
+	 * @param integer $max_depth Maximum depth to load the modules.
 	 * @return void
 	 */
-	public static function load_components( $dir, $max_depth = 1 ) {
+	public static function load_modules( $dir, $max_depth = 1 ) {
 		$object = new File_Helper();
-		$object->load_components( $dir, $max_depth );
+		$object->load_modules( $dir, $max_depth );
 	}
 
 	/**
