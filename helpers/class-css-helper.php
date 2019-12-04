@@ -11,7 +11,6 @@ namespace Wpfw\Helpers;
  * Class to provide stylesheet enqueue methods.
  */
 class CSS_Helper {
-
 	/**
 	 * Item's id.
 	 *
@@ -24,7 +23,7 @@ class CSS_Helper {
 	 *
 	 * @var array
 	 */
-	private $items = [];
+	private $items = array();
 
 	/**
 	 * Register the stylesheet handle name.
@@ -34,7 +33,7 @@ class CSS_Helper {
 	 */
 	public function register( $handle ) {
 		$this->id++;
-		$this->items[ $this->id ]           = [];
+		$this->items[ $this->id ]           = array();
 		$this->items[ $this->id ]['handle'] = $handle;
 		return $this;
 	}
@@ -80,9 +79,9 @@ class CSS_Helper {
 	public function save() {
 		$handle = $this->items[ $this->id ]['handle'];
 		$url    = $this->items[ $this->id ]['url'];
-		$deps   = isset( $this->items[ $this->id ]['deps'] ) ? $this->items[ $this->id ]['deps'] : [];
+		$deps   = isset( $this->items[ $this->id ]['deps'] ) ? $this->items[ $this->id ]['deps'] : array();
 		$ver    = isset( $this->items[ $this->id ]['ver'] ) ? $this->items[ $this->id ]['ver'] : null; // remove default WordPress version for security.
-		$ver    = $ver && 'auto' === $ver ? Asset::get_modified_time( $url ) : $ver;
+		$ver    = $ver && 'auto' === $ver ? \Wpfw\Asset::get_modified_time( $url ) : $ver;
 
 		wp_register_style( $handle, $url, $deps, $ver );
 	}

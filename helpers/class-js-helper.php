@@ -11,7 +11,6 @@ namespace Wpfw\Helpers;
  * Class to provide script enqueue methods
  */
 class JS_Helper {
-
 	/**
 	 * Item's id.
 	 *
@@ -24,7 +23,7 @@ class JS_Helper {
 	 *
 	 * @var array
 	 */
-	private $items = [];
+	private $items = array();
 
 	/**
 	 * Register the script handle name.
@@ -34,7 +33,7 @@ class JS_Helper {
 	 */
 	public function register( $handle ) {
 		$this->id++;
-		$this->items[ $this->id ]         = [];
+		$this->items[ $this->id ]         = array();
 		$this->items[ $this->id ]['name'] = $handle;
 		return $this;
 	}
@@ -99,10 +98,10 @@ class JS_Helper {
 	 * @return object
 	 */
 	public function set_global_object( $array ) {
-		$this->items[ $this->id ]['localize'] = [
+		$this->items[ $this->id ]['localize'] = array(
 			'name'  => $array['name'],
 			'value' => $array['value'],
-		];
+		);
 
 		return $this;
 	}
@@ -115,9 +114,9 @@ class JS_Helper {
 	public function save() {
 		$url       = $this->items[ $this->id ]['url'];
 		$handle    = $this->items[ $this->id ]['name'];
-		$deps      = isset( $this->items[ $this->id ]['deps'] ) ? $this->items[ $this->id ]['deps'] : [];
+		$deps      = isset( $this->items[ $this->id ]['deps'] ) ? $this->items[ $this->id ]['deps'] : array();
 		$ver       = isset( $this->items[ $this->id ]['ver'] ) ? $this->items[ $this->id ]['ver'] : null;
-		$ver       = $ver && 'auto' === $ver ? Asset::get_modified_time( $url ) : $ver;
+		$ver       = $ver && 'auto' === $ver ? \Wpfw\Asset::get_modified_time( $url ) : $ver;
 		$in_footer = isset( $this->items[ $this->id ]['in_footer'] ) ? $this->items[ $this->id ]['in_footer'] : true; // put default to footer for non-blocking request.
 		$localize  = isset( $this->items[ $this->id ]['localize'] ) ? $this->items[ $this->id ]['localize'] : false;
 
